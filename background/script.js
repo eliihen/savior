@@ -3,7 +3,9 @@ browser.runtime.onMessage.addListener(handleMessage);
 function handleMessage({ type, data }) {
   switch (type) {
     case 'exportHtml':
-      exportHtml(data);
+      return exportHtml(data);
+    case 'copyText':
+      return copyText(data);
   }
 }
 
@@ -15,4 +17,12 @@ function exportHtml(html) {
     filename: `request.html`,
     url
   });
+}
+
+async function copyText(text) {
+  try {
+    navigator.clipboard.writeText(text);
+  } catch (e) {
+    console.error(e);
+  }
 }

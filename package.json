@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "render-page": "babel-node --presets @babel/env -- scripts/renderPage.js"
+    "render-page": "babel-node --presets @babel/env -- scripts/renderPage.js",
+    "render-text": "babel-node --presets @babel/env -- scripts/renderText.js"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",

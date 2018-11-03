@@ -1,4 +1,5 @@
 import renderHtml from './output-html.js';
+import renderText from './output-text.js';
 
 function htmlToElement(html) {
   const template = document.createElement('template');
@@ -12,6 +13,9 @@ const Row = ({ url }) => htmlToElement(`
       ${url}
     </td>
     <td class="buttons">
+      <button class="copy">
+        Copy text
+      </button>
       <button class="export">
         Export
       </button>
@@ -29,6 +33,21 @@ const panelHandler = ({ document }) => {
   browser.devtools.network.onRequestFinished.addListener(request => {
     const { url } = request.request;
     const row = Row({ url });
+
+    row
+      .querySelector('.copy')
+      .addEventListener('click', async () => {
+        const [ body, contentType ] = await request.getContent();
+        browser.runtime.sendMessage({
+          type: 'copyText',
+          data: renderText({
+            ...request,
+            contentType,
+            body,
+          }),
+        });
+      })
+
     row
       .querySelector('.export')
       .addEventListener('click', async () => {
@@ -36,11 +55,7 @@ const panelHandler = ({ document }) => {
         browser.runtime.sendMessage({
           type: 'exportHtml',
           data: renderHtml({
-            request: request.request,
-            response: request.response,
-            serverIPAddress: request.serverIPAddress,
-            time: request.time,
-            timings: request.timings,
+            ...request,
             contentType,
             body,
           }),

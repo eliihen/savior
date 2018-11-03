@@ -7,7 +7,8 @@
   "description": "A devtool panel for easy sharing of requests, failed or otherwise",
 
   "permissions": [
-    "downloads"
+    "downloads",
+    "clipboardWrite"
   ],
 
   "icons": {
