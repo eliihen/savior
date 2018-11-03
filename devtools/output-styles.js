@@ -5,6 +5,7 @@ export default `
 
   iframe {
     width: 100%;
+    height: 500px;
     border: 0;
   }
 
@@ -30,5 +31,10 @@ export default `
 
   .summary img {
     height: 150px !important;
+  }
+
+  .response pre {
+    max-height: 500px;
+    overflow: auto;
   }
 `;

@@ -4,9 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="panel.css" charset="utf-8" />
-    <title>Requests</title>
+    <title>Savior</title>
   </head>
   <body>
+    <div>
+      <button type="button" id="clear">Clear</button>
+    </div>
     <table>
       <thead>
         <tr>
@@ -14,21 +17,7 @@
           <th class="buttons"></th>
         </tr>
       </thead>
-      <tbody>
-      </tbody>
+      <tbody></tbody>
     </table>
-
-    <template id="row-template">
-      <tr>
-        <td class="url">
-          ${url}
-        </td>
-        <td class="buttons">
-          <button class="export">
-            Export
-          </button>
-        </td>
-      </tr>
-    </template>
   </body>
 </html>

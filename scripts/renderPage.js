@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const testFixture = require('./test-request.json');
-const renderTemplate = require('../devtools/output-template.js').default;
+const renderTemplate = require('../devtools/output-html.js').default;
 
 const output = renderTemplate({
   request: testFixture.request,

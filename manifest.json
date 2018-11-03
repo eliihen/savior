@@ -1,10 +1,10 @@
 {
 
   "manifest_version": 2,
-  "name": "Request exporter",
+  "name": "Savior",
   "version": "1.0",
 
-  "description": "Adds a red border to all webpages matching mozilla.org.",
+  "description": "A devtool panel for easy sharing of requests, failed or otherwise",
 
   "permissions": [
     "downloads"

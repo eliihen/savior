@@ -13,20 +13,20 @@ const className = status => {
   return 'other';
 }
 
-const Headers = headers => `
+const buildTable = ({ summary, heading1, heading2, values }) => `
 <details>
   <summary>
-    <h3 class="ui sub header">Headers</h3>
+    <h3 class="ui sub header">${summary}</h3>
   </summary>
   <table class="ui celled table">
     <thead>
       <tr>
-        <th>Header</th>
-        <th>Value</th>
+        <th>${heading1}</th>
+        <th>${heading2}</th>
       </tr>
     </thead>
     <tbody>
-      ${headers.map(({ name, value }) => `
+      ${values.map(({ name, value }) => `
         <tr>
           <td>${name}</td>
           <td>${value}</td>
@@ -36,51 +36,26 @@ const Headers = headers => `
   </table>
 </details>`;
 
-const Cookies = cookies => `
-<details>
-  <summary>
-    <h3 class="ui sub header">Cookies</h3>
-  </summary>
-  <table class="ui celled table">
-    <thead>
-      <tr>
-        <th>Cookie</th>
-        <th>Value</th>
-      </tr>
-    </thead>
-    <tbody>
-      ${cookies.map(({ name, value }) => `
-        <tr>
-          <td>${name}</td>
-          <td>${value}</td>
-        </tr>
-      `).join('')}
-    </tbody>
-  </table>
-</details>`;
+const Headers = headers => buildTable({
+  summary: 'Headers',
+  heading1: 'Header',
+  heading2: 'Value',
+  values: headers,
+});
 
-const Query = parameters => `
-<details>
-  <summary>
-    <h3 class="ui sub header">Query parameters</h3>
-  </summary>
-  <table class="ui celled table">
-    <thead>
-      <tr>
-        <th>Key</th>
-        <th>Value</th>
-      </tr>
-    </thead>
-    <tbody>
-      ${parameters.map(({ name, value }) => `
-        <tr>
-          <td>${name}</td>
-          <td>${value}</td>
-        </tr>
-      `).join('')}
-    </tbody>
-  </table>
-</details>`;
+const Cookies = cookies => buildTable({
+  summary: 'Cookies',
+  heading1: 'Cookie',
+  heading2: 'Value',
+  values: cookies,
+});
+
+const Query = parameters => buildTable({
+  summary: 'Query parameters',
+  heading1: 'Key',
+  heading2: 'Value',
+  values: parameters,
+});
 
 const Timings = timings => `
 <details>
