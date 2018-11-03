@@ -2,7 +2,7 @@
   "name": "export-request",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT",
+  "license": "GPL-3.0-or-later",
   "scripts": {
     "render-page": "babel-node --presets @babel/env -- scripts/renderPage.js",
     "render-text": "babel-node --presets @babel/env -- scripts/renderText.js"
