@@ -1,0 +1,233 @@
+{
+  "startedDateTime": "2018-11-03T00:56:28.239+01:00",
+  "request": {
+    "bodySize": 0,
+    "method": "GET",
+    "url": "https://www.nrk.no/",
+    "httpVersion": "HTTP/2.0",
+    "headers": [
+      {
+        "name": "Host",
+        "value": "www.nrk.no"
+      },
+      {
+        "name": "User-Agent",
+        "value": "Mozilla/5.0 (X11; Linux x86_64; rv:65.0) Gecko/20100101 Firefox/65.0"
+      },
+      {
+        "name": "Accept",
+        "value": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+      },
+      {
+        "name": "Accept-Language",
+        "value": "en-US,en;q=0.5"
+      },
+      {
+        "name": "Accept-Encoding",
+        "value": "gzip, deflate, br"
+      },
+      {
+        "name": "Referer",
+        "value": "https://www.nrk.no/norge/ropstad-vil-ha-minst-tre-krf-statsrader-1.14277577"
+      },
+      {
+        "name": "Connection",
+        "value": "keep-alive"
+      },
+      {
+        "name": "Cookie",
+        "value": "_nrkbucket1=1; i00=00005bdc9d239b940000; _ga=GA1.2.1251022460.1541184803; _gid=GA1.2.1242068159.1541184803; _lp4_u=cTcihesfUX; _cb_ls=1; _cb=D7wF7MDiPxNbjQHeQ; _chartbeat2=.1541184803861.1541202976189.11.DyyGu6UPIUQDFKQsKDHgzi7CR-OYg.73; _cb_svref=null; _chartbeat5=; _gat_ludo_1541202944233=1; _gat_ludo_1541202944311=1; _gat_ludo_1541202944336=1; _gat_ludo_1541202947782=1; _gat_ludo_1541202947878=1; _gat_ludo_1541202947894=1; _gat=1"
+      },
+      {
+        "name": "Upgrade-Insecure-Requests",
+        "value": "1"
+      },
+      {
+        "name": "If-None-Match",
+        "value": "W/\"75bf7-HCNcuytwosK0Hc1TmMl+LXpGPpA\""
+      },
+      {
+        "name": "Cache-Control",
+        "value": "max-age=0"
+      },
+      {
+        "name": "TE",
+        "value": "Trailers"
+      }
+    ],
+    "cookies": [
+      {
+        "name": "_nrkbucket1",
+        "value": "1"
+      },
+      {
+        "name": "i00",
+        "value": "00005bdc9d239b940000"
+      },
+      {
+        "name": "_ga",
+        "value": "GA1.2.1251022460.1541184803"
+      },
+      {
+        "name": "_gid",
+        "value": "GA1.2.1242068159.1541184803"
+      },
+      {
+        "name": "_lp4_u",
+        "value": "cTcihesfUX"
+      },
+      {
+        "name": "_cb_ls",
+        "value": "1"
+      },
+      {
+        "name": "_cb",
+        "value": "D7wF7MDiPxNbjQHeQ"
+      },
+      {
+        "name": "_chartbeat2",
+        "value": ".1541184803861.1541202976189.11.DyyGu6UPIUQDFKQsKDHgzi7CR-OYg.73"
+      },
+      {
+        "name": "_cb_svref",
+        "value": "null"
+      },
+      {
+        "name": "_chartbeat5",
+        "value": ""
+      },
+      {
+        "name": "_gat_ludo_1541202944233",
+        "value": "1"
+      },
+      {
+        "name": "_gat_ludo_1541202944311",
+        "value": "1"
+      },
+      {
+        "name": "_gat_ludo_1541202944336",
+        "value": "1"
+      },
+      {
+        "name": "_gat_ludo_1541202947782",
+        "value": "1"
+      },
+      {
+        "name": "_gat_ludo_1541202947878",
+        "value": "1"
+      },
+      {
+        "name": "_gat_ludo_1541202947894",
+        "value": "1"
+      },
+      {
+        "name": "_gat",
+        "value": "1"
+      }
+    ],
+    "queryString": [],
+    "headersSize": 926
+  },
+  "response": {
+    "status": 200,
+    "statusText": "OK",
+    "httpVersion": "HTTP/2.0",
+    "headers": [
+      {
+        "name": "server",
+        "value": "nginx/1.15.3"
+      },
+      {
+        "name": "content-type",
+        "value": "text/html; charset=utf-8"
+      },
+      {
+        "name": "vary",
+        "value": "Accept-Encoding"
+      },
+      {
+        "name": "x-ttl",
+        "value": "1s"
+      },
+      {
+        "name": "x-front-instance",
+        "value": "not-set"
+      },
+      {
+        "name": "x-frame-options",
+        "value": "SAMEORIGIN"
+      },
+      {
+        "name": "x-content-type-options",
+        "value": "nosniff"
+      },
+      {
+        "name": "x-xss-protection",
+        "value": "1; mode=block"
+      },
+      {
+        "name": "content-security-policy",
+        "value": "default-src 'self' https://*.nrk.no; script-src 'self' https://*.pusher.com https://*.nrk.no https://www.google-analytics.com https://*.chartbeat.com https://*.chartbeat.net https://*.linkpulse.com https://*.lp4.io https://*.scorecardresearch.com https://www.gstatic.com https://cws.conviva.com https://ma93-r.analytics.edgekey.net https://ssl-nrkstream.tns-cs.net blob:; connect-src 'self' wss://*.pusher.com wss://*.pusherapp.com wss://*.nrk.no https://*.nrk.no https://*.qbrick.com https://*.telenorcdn.net https://*.akamaized.net https://*.akamaihd.net https://*.linkpulse.com https://*.lp4.io https://www.google-analytics.com https://*.scorecardresearch.com https://ma93-r.analytics.edgekey.net https://ssl-nrkstream.tns-cs.net https://cws.conviva.com; img-src 'self' https://*.lp4.io https://*.linkpulse.com https://*.tns-cs.net https://*.chartbeat.net https://www.google-analytics.com https://*.nrk.no https://*.akamaized.net https://*.akamaihd.net https://*.scorecardresearch.com https://*.googleusercontent.com https://ma93-r.analytics.edgekey.net https://ssl-nrkstream.tns-cs.net data:; style-src 'self' https: 'unsafe-inline'; frame-src 'self' https://chartbeat.com https://*.chartbeat.com; media-src https://*.nrk.no https://*.qbrick.com https://*.telenorcdn.net https://*.akamaized.net https://*.akamaihd.net blob: data:;"
+      },
+      {
+        "name": "x-request-id",
+        "value": "9c2149e5ab56c8423c7362aa5685760f"
+      },
+      {
+        "name": "etag",
+        "value": "W/\"75bf7-woKE5884g7eCtlWBsR76uiX5OH8\""
+      },
+      {
+        "name": "content-encoding",
+        "value": "gzip"
+      },
+      {
+        "name": "cache-control",
+        "value": "public, max-age=1"
+      },
+      {
+        "name": "expires",
+        "value": "Fri, 02 Nov 2018 23:56:50 GMT"
+      },
+      {
+        "name": "date",
+        "value": "Fri, 02 Nov 2018 23:56:49 GMT"
+      },
+      {
+        "name": "content-length",
+        "value": "80939"
+      },
+      {
+        "name": "strict-transport-security",
+        "value": "max-age=15768000"
+      },
+      {
+        "name": "X-Firefox-Spdy",
+        "value": "h2"
+      }
+    ],
+    "cookies": [],
+    "content": {
+      "mimeType": "text/html; charset=utf-8",
+      "size": 482295,
+      "comment": "Response bodies are not included."
+    },
+    "redirectURL": "",
+    "headersSize": 1914,
+    "bodySize": 82853
+  },
+  "cache": {},
+  "timings": {
+    "blocked": 0,
+    "dns": 0,
+    "connect": 0,
+    "ssl": 0,
+    "send": 0,
+    "wait": 5,
+    "receive": 6
+  },
+  "time": 11,
+  "_securityState": "secure",
+  "serverIPAddress": "23.52.32.5",
+  "connection": "443"
+}

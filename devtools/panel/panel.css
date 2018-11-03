@@ -1,0 +1,21 @@
+:root {
+  --gray: gray;
+}
+body {
+  margin: 0;
+}
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  width: 100%;
+}
+tbody tr:nth-child(2n) td {
+  background-color: var(--gray);
+}
+th, td {
+  white-space: wrap;
+  word-wrap: break-word;
+}
+th.buttons {
+  width: 100px;
+}

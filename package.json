@@ -1,0 +1,14 @@
+{
+  "name": "export-request",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "render-page": "babel-node --presets @babel/env -- scripts/renderPage.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/node": "^7.0.0",
+    "@babel/preset-env": "^7.1.0"
+  }
+}
