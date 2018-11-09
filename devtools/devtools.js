@@ -1,3 +1,4 @@
+import { escapeAttribute, className } from './utils.js';
 import renderHtml from './output-html.js';
 import renderText from './output-text.js';
 
@@ -7,9 +8,12 @@ function htmlToElement(html) {
   return template.content.firstChild;
 }
 
-const Row = ({ url }) => htmlToElement(`
+const Row = ({ status, statusText, url }) => htmlToElement(`
   <tr>
-    <td class="url">
+    <td class="status ${className(status)}" title="${statusText}">
+      <span class="status-bubble">${status}</span>
+    </td>
+    <td class="url" title="${escapeAttribute(url)}">
       ${url}
     </td>
     <td class="buttons">
@@ -23,7 +27,7 @@ const Row = ({ url }) => htmlToElement(`
   </tr>
 `);
 
-const panelHandler = ({ document }) => {
+function panelHandler({ document }) {
   const tbody = document.querySelector('tbody');
   document.querySelector('#clear').addEventListener(
     'click',
@@ -32,7 +36,13 @@ const panelHandler = ({ document }) => {
 
   browser.devtools.network.onRequestFinished.addListener(request => {
     const { url } = request.request;
-    const row = Row({ url });
+    const { status, statusText } = request.response;
+
+    // TODO a lot of responses come through with status 0 and missing data.
+    // Filter them out until we can figure out what is going on
+    if (!status) return;
+
+    const row = Row({ url, status, statusText });
 
     row
       .querySelector('.copy')

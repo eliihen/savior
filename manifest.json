@@ -11,12 +11,11 @@
     "clipboardWrite"
   ],
 
-  "icons": {
-    "48": "icons/border-48.png"
-  },
-
   "background": {
-    "scripts": ["background/script.js"]
+    "scripts": [
+      "devtools/browser-polyfill.js",
+      "background/script.js"
+    ]
   },
 
   "devtools_page": "devtools/requests.html"

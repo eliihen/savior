@@ -1,21 +1,72 @@
 :root {
-  --gray: gray;
+  --light-gray: #353539;
+  --gray: #2a2a2e;;
+  --dark-gray: #1b1b1d;
+  --font-color: #909090;
 }
+
 body {
   margin: 0;
+  min-height: 100vh;
+  background-color: var(--light-gray);
+  font-family: sans-serif;
+  color: var(--font-color);
 }
 table {
   table-layout: fixed;
   border-collapse: collapse;
   width: 100%;
+  background-color: var(--dark-gray);
+}
+tbody tr td {
+  background-color: #2a2a2e;
+  padding: 5px;
 }
 tbody tr:nth-child(2n) td {
+  background-color: var(--light-gray);
+}
+button {
+  color: var(--font-color);
+  border: 0;
   background-color: var(--gray);
 }
+button:hover {
+  background-color: var(--light-gray);
+}
 th, td {
-  white-space: wrap;
-  word-wrap: break-word;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-right: 1px solid var(--light-gray);
+}
+.toolbar {
+  padding: 5px;
+  border-bottom: 1px solid #3c3c3d;
+  background-color: var(--gray);
+}
+td.status {
+  text-align: center;
+}
+th.status {
+  width: 70px;
 }
 th.buttons {
-  width: 100px;
+  width: 160px;
+}
+td.buttons {
+  text-align: center;
+}
+.status-bubble {
+  padding: 2px;
+  border-radius: 5px;
+  color: white;
+}
+.ok .status-bubble {
+  background-color: #21ba45;
+}
+.failed .status-bubble {
+  background-color: #db2828;
+}
+.other .status-bubble {
+  background-color: #767676;
 }

@@ -1,16 +1,10 @@
 import styles from './output-styles.js';
+import { escape, escapeAttribute, className } from './utils.js';
 
-const escape = string => string.replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const mood = status => {
   if (status >= 200 && status < 300) return 'green,happy';
   if (status >= 500 && status < 600) return 'red';
   return 'gray';
-}
-
-const className = status => {
-  if (status >= 200 && status < 300) return 'ok';
-  if (status >= 500 && status < 600) return 'failed';
-  return 'other';
 }
 
 const buildTable = ({ summary, heading1, heading2, values }) => `
@@ -246,7 +240,7 @@ export default ({
                   <h4>Preview</h4>
                   <iframe
                     sandbox=""
-                    srcdoc="${body.replace(/"/g, '&quot;')}"
+                    srcdoc="${escapeAttribute(body)}"
                     importance="low"
                     title="Response preview"
                   ></iframe>
