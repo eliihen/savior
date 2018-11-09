@@ -52,29 +52,31 @@ browser.devtools.panels.create(
 
       row
         .querySelector('.copy')
-        .addEventListener('click', async () => {
-          const [ body, contentType ] = await request.getContent();
-          browser.runtime.sendMessage({
-            type: 'copyText',
-            data: renderText({
-              ...request,
-              contentType,
-              body,
-            }),
+        .addEventListener('click', () => {
+          request.getContent((body, contentType)  => {
+            browser.runtime.sendMessage({
+              type: 'copyText',
+              data: renderText({
+                ...request,
+                contentType,
+                body,
+              }),
+            });
           });
         })
 
       row
         .querySelector('.export')
-        .addEventListener('click', async () => {
-          const [ body, contentType ] = await request.getContent();
-          browser.runtime.sendMessage({
-            type: 'exportHtml',
-            data: renderHtml({
-              ...request,
-              contentType,
-              body,
-            }),
+        .addEventListener('click', () => {
+          request.getContent((body, contentType)  => {
+            browser.runtime.sendMessage({
+              type: 'exportHtml',
+              data: renderHtml({
+                ...request,
+                contentType,
+                body,
+              }),
+            });
           });
         })
 

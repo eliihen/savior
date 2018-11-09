@@ -21,8 +21,13 @@ function exportHtml(html) {
 
 async function copyText(text) {
   try {
-    navigator.clipboard.writeText(text);
+    await navigator.clipboard.writeText(text);
   } catch (e) {
-    console.error(e);
+    // Chrome fails using clipboard API. fallback to execCommand
+    document.oncopy = function(event) {
+      event.clipboardData.setData("Text", text);
+      event.preventDefault();
+    };
+    document.execCommand('Copy');
   }
 }
