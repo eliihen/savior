@@ -3,6 +3,14 @@ export default `
     display: inline;
   }
 
+  img {
+    object-fit: cover;
+  }
+
+  td:last-child {
+    word-break: break-word;
+  }
+
   iframe {
     width: 100%;
     height: 500px;

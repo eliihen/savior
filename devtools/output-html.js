@@ -203,8 +203,8 @@ export default ({
                 </h2>
               </div>
               <p class="meta">
-                Headers: ${request.headersSize / 1000} KB
-                Body: ${request.bodySize / 1000} KB,
+                Headers: ${request.headersSize / 1000} KB,
+                Body: ${request.bodySize / 1000} KB
               </p>
 
               ${Headers(request.headers)}
@@ -219,8 +219,8 @@ export default ({
                 <h2 class="ui header">Response</h2>
               </div>
               <p class="meta">
-                Headers: ${response.headersSize / 1000} KB
-                Body: ${response.bodySize / 1000} KB,
+                Headers: ${response.headersSize / 1000} KB,
+                Body: ${response.bodySize / 1000} KB
               </p>
               ${response.redirectURL && `
                 <p>Redirect: ${response.redirectURL}</p>
@@ -253,7 +253,7 @@ export default ({
       <script>
         /* Runtime formatting to use */
         const startedTime = document.querySelector('#startedTime');
-        startedTime.innerText = new Date(startedTime.innerText).toLocaleString(navigator.languages);
+        startedTime.innerText = new Date(startedTime.innerText.trim()).toLocaleString(navigator.languages);
       </script>
     </body>
   </html>`;

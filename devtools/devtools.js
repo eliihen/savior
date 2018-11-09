@@ -44,6 +44,15 @@ browser.devtools.panels.create(
       const { url } = request.request;
       const { status, statusText } = request.response;
 
+      // Cant use contentType from await getContent because chrome does not
+      // support it. Fetch contentType from headers instead.
+      let contentType;
+      request.response.headers.some(({ name, value }) => {
+        if (name.toLowerCase() !== 'content-type') return false;
+        contentType = value;
+        return true;
+      });
+
       // TODO a lot of responses come through with status 0 and missing data.
       // Filter them out until we can figure out what is going on
       // Probably caused by https://bugzilla.mozilla.org/show_bug.cgi?id=1472653
@@ -54,7 +63,7 @@ browser.devtools.panels.create(
       row
         .querySelector('.copy')
         .addEventListener('click', () => {
-          request.getContent((body, contentType)  => {
+          request.getContent(body => {
             browser.runtime.sendMessage({
               type: 'copyText',
               data: renderText({
@@ -69,7 +78,7 @@ browser.devtools.panels.create(
       row
         .querySelector('.export')
         .addEventListener('click', () => {
-          request.getContent((body, contentType)  => {
+          request.getContent(body  => {
             browser.runtime.sendMessage({
               type: 'exportHtml',
               data: renderHtml({
