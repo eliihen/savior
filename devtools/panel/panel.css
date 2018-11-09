@@ -1,14 +1,23 @@
 :root {
-  --light-gray: #353539;
-  --gray: #2a2a2e;;
-  --dark-gray: #1b1b1d;
+  --light: #f2f2f2;
+  --medium: #f9f9fa;
+  --dark: #f9f9fa;
+  --font-color: #434348;
+  --border-color: #e0e0e2;
+}
+
+.dark {
+  --light: #353539;
+  --medium: #2a2a2e;
+  --dark: #1b1b1d;
   --font-color: #909090;
+  --border-color: var(--light);
 }
 
 body {
   margin: 0;
   min-height: 100vh;
-  background-color: var(--light-gray);
+  background-color: var(--light);
   font-family: sans-serif;
   color: var(--font-color);
 }
@@ -16,33 +25,33 @@ table {
   table-layout: fixed;
   border-collapse: collapse;
   width: 100%;
-  background-color: var(--dark-gray);
+  background-color: var(--dark);
 }
 tbody tr td {
-  background-color: #2a2a2e;
+  background-color: var(--medium);
   padding: 5px;
 }
 tbody tr:nth-child(2n) td {
-  background-color: var(--light-gray);
+  background-color: var(--light);
 }
 button {
   color: var(--font-color);
   border: 0;
-  background-color: var(--gray);
+  background-color: var(--medium);
 }
 button:hover {
-  background-color: var(--light-gray);
+  background-color: var(--light);
 }
 th, td {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  border-right: 1px solid var(--light-gray);
+  border-right: 1px solid var(--border-color);
 }
 .toolbar {
   padding: 5px;
-  border-bottom: 1px solid #3c3c3d;
-  background-color: var(--gray);
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--medium);
 }
 td.status {
   text-align: center;

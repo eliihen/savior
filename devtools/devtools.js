@@ -33,6 +33,7 @@ browser.devtools.panels.create(
   "/devtools/panel/panel.html"
 ).then(newPanel => {
   function panelHandler({ document }) {
+    document.body.className = browser.devtools.panels.themeName;
     const tbody = document.querySelector('tbody');
     document.querySelector('#clear').addEventListener(
       'click',
