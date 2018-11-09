@@ -29,7 +29,7 @@ const Row = ({ status, statusText, url }) => htmlToElement(`
 
 browser.devtools.panels.create(
   "Savior",
-  "icon-512.png",
+  "/devtools/icons/icon-24.png",
   "/devtools/panel/panel.html"
 ).then(newPanel => {
   function panelHandler({ document }) {
