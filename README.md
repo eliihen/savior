@@ -42,6 +42,6 @@ The following permissions are in use
 |downloads     |Downloading HTML files of requests to the computer   |
 |clipboardWrite|Writing texts of requests to the computer's clipboard|
 
-[play-store]: TODO
-[amo]: TODO
+[play-store]: https://chrome.google.com/webstore/detail/savior/jmdpeobafnjdgdgbigijnnifnfhinhjj
+[amo]: https://addons.mozilla.org/en-US/firefox/addon/savior-devtool
 [bugzilla-bug]: https://bugzilla.mozilla.org/show_bug.cgi?id=1472653
