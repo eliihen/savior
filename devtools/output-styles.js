@@ -42,7 +42,7 @@ export default `
   }
 
   .response pre {
-    max-height: 500px;
-    overflow: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
   }
 `;
